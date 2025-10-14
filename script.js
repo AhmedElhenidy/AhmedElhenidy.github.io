@@ -35,11 +35,11 @@ window.addEventListener('scroll', () => {
 // ===== Typing Animation =====
 const typingText = document.querySelector('.typing-text');
 const phrases = [
-    'Flutter Developer',
-    'Mobile App Developer',
-    'Cross-Platform Developer',
-    'UI/UX Enthusiast',
-    'Dart Programmer'
+    'Flutter Development Services',
+    'Web Application Solutions',
+    'AI-Powered Applications',
+    'Full-Stack Development',
+    'Software Solutions Company'
 ];
 
 let phraseIndex = 0;
@@ -156,7 +156,7 @@ contactForm.addEventListener('submit', (e) => {
     console.log('Form submitted:', formData);
     
     // Show success message
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    alert('Thank you for your inquiry! Our team will get back to you within 24 hours with a detailed proposal.');
     
     // Reset form
     contactForm.reset();
@@ -280,6 +280,6 @@ animateCursor();
 */
 
 // ===== Print Console Message =====
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
-console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #8b5cf6;');
+console.log('%c🚀 Welcome to Elhenidy Tech Solutions!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
+console.log('%cReady to build your next mobile app? Let\'s discuss your project!', 'font-size: 14px; color: #8b5cf6;');
 
