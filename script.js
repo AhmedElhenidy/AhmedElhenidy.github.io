@@ -35,11 +35,11 @@ window.addEventListener('scroll', () => {
 // ===== Typing Animation =====
 const typingText = document.querySelector('.typing-text');
 const phrases = [
-    'Software Developer',
-    'Creative Designer',
-    'Problem Solver',
-    'Tech Enthusiast',
-    'Full Stack Developer'
+    'Flutter Developer',
+    'Mobile App Developer',
+    'Cross-Platform Developer',
+    'UI/UX Enthusiast',
+    'Dart Programmer'
 ];
 
 let phraseIndex = 0;
