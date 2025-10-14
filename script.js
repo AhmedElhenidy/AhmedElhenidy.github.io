@@ -37,9 +37,9 @@ const typingText = document.querySelector('.typing-text');
 const phrases = [
     'Flutter Development Services',
     'Web Application Solutions',
+    'UI/UX Design Services',
     'AI-Powered Applications',
-    'Full-Stack Development',
-    'Software Solutions Company'
+    'Product Design Solutions'
 ];
 
 let phraseIndex = 0;
