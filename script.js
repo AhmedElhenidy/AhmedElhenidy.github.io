@@ -34,13 +34,6 @@ window.addEventListener('scroll', () => {
 
 // ===== Typing Animation =====
 const typingText = document.querySelector('.typing-text');
-const phrases = [
-    'Flutter Development Services',
-    'Web Application Solutions',
-    'UI/UX Design Services',
-    'AI-Powered Applications',
-    'Product Design Solutions'
-];
 
 let phraseIndex = 0;
 let charIndex = 0;
@@ -48,7 +41,7 @@ let isDeleting = false;
 let typingSpeed = 100;
 
 function typeText() {
-    const currentPhrase = phrases[phraseIndex];
+    const currentPhrase = phrases[currentLanguage][phraseIndex];
     
     if (isDeleting) {
         typingText.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -65,7 +58,7 @@ function typeText() {
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
+        phraseIndex = (phraseIndex + 1) % phrases[currentLanguage].length;
         typingSpeed = 500;
     }
     
@@ -278,6 +271,95 @@ function animateCursor() {
 
 animateCursor();
 */
+
+// ===== Language Switching =====
+let currentLanguage = 'en';
+
+const langBtn = document.getElementById('lang-btn');
+const htmlElement = document.documentElement;
+
+// Typing animation phrases in both languages
+const phrases = {
+    en: [
+        'Flutter Development Services',
+        'Web Application Solutions',
+        'UI/UX Design Services',
+        'AI-Powered Applications',
+        'Product Design Solutions'
+    ],
+    ar: [
+        'خدمات تطوير Flutter',
+        'حلول تطبيقات الويب',
+        'خدمات تصميم واجهات المستخدم',
+        'تطبيقات مدعومة بالذكاء الاصطناعي',
+        'حلول تصميم المنتجات'
+    ]
+};
+
+function switchLanguage() {
+    currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+    
+    // Update HTML direction and language
+    htmlElement.setAttribute('dir', currentLanguage === 'ar' ? 'rtl' : 'ltr');
+    htmlElement.setAttribute('lang', currentLanguage);
+    
+    // Update language button text
+    langBtn.textContent = currentLanguage === 'en' ? 'العربية' : 'English';
+    
+    // Update all elements with data attributes
+    const elementsWithData = document.querySelectorAll('[data-en], [data-ar]');
+    elementsWithData.forEach(element => {
+        const text = element.getAttribute(`data-${currentLanguage}`);
+        if (text) {
+            element.textContent = text;
+        }
+    });
+    
+    // Update placeholder attributes
+    const inputsWithPlaceholder = document.querySelectorAll('[data-en-placeholder], [data-ar-placeholder]');
+    inputsWithPlaceholder.forEach(input => {
+        const placeholder = input.getAttribute(`data-${currentLanguage}-placeholder`);
+        if (placeholder) {
+            input.setAttribute('placeholder', placeholder);
+        }
+    });
+    
+    // Update typing animation phrases
+    updateTypingAnimation();
+    
+    // Store language preference
+    localStorage.setItem('preferredLanguage', currentLanguage);
+}
+
+function updateTypingAnimation() {
+    // Reset typing animation with new phrases
+    const typingText = document.querySelector('.typing-text');
+    if (typingText) {
+        typingText.textContent = '';
+        phraseIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+        typingSpeed = 100;
+        setTimeout(typeText, 1000);
+    }
+}
+
+// Initialize language from localStorage or default to English
+function initializeLanguage() {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ar')) {
+        currentLanguage = savedLanguage;
+        if (currentLanguage === 'ar') {
+            switchLanguage();
+        }
+    }
+}
+
+// Event listener for language button
+langBtn.addEventListener('click', switchLanguage);
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', initializeLanguage);
 
 // ===== Print Console Message =====
 console.log('%c🚀 Welcome to Elhenidy Tech Solutions!', 'font-size: 20px; color: #6366f1; font-weight: bold;');

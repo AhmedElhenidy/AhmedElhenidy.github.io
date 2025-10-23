@@ -14,13 +14,16 @@
         <div class="nav-container">
             <a href="#home" class="logo">AE</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Team</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ar="حولنا">About</a></li>
+                <li><a href="#skills" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+                <li><a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-en="Team" data-ar="الفريق">Team</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
             </ul>
+            <div class="language-switcher">
+                <button id="lang-btn" class="lang-btn">العربية</button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -35,17 +38,17 @@
             <div class="hero-text">
                 <h1 class="hero-title">
                     <span class="highlight">Ahmed Elhenidy</span><br>
-                    Software Solutions
+                    <span data-en="Software Solutions" data-ar="حلول البرمجيات">Software Solutions</span>
                 </h1>
                 <p class="hero-subtitle">
                     <span class="typing-text"></span><span class="cursor">|</span>
                 </p>
-                <p class="hero-description">
+                <p class="hero-description" data-en="Leading a software solutions company that specializes in mobile app development, web applications, AI solutions, and UI/UX design, delivering exceptional user experiences across all platforms." data-ar="نقود شركة حلول برمجية متخصصة في تطوير التطبيقات المحمولة وتطبيقات الويب وحلول الذكاء الاصطناعي وتصميم واجهات المستخدم، ونقدم تجارب مستخدم استثنائية عبر جميع المنصات.">
                     Leading a software solutions company that specializes in mobile app development, web applications, AI solutions, and UI/UX design, delivering exceptional user experiences across all platforms.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Our Work</a>
-                    <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+                    <a href="#projects" class="btn btn-primary" data-en="View Our Work" data-ar="شاهد أعمالنا">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Start Your Project" data-ar="ابدأ مشروعك">Start Your Project</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -60,7 +63,7 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Our Company</h2>
+            <h2 class="section-title" data-en="About Our Company" data-ar="حول شركتنا">About Our Company</h2>
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-placeholder">
@@ -68,15 +71,15 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <p class="lead">
+                    <p class="lead" data-en="We are a leading software solutions company specializing in mobile apps, web development, AI solutions, and UI/UX design." data-ar="نحن شركة رائدة في حلول البرمجيات متخصصة في التطبيقات المحمولة وتطوير الويب وحلول الذكاء الاصطناعي وتصميم واجهات المستخدم.">
                         We are a leading software solutions company specializing in mobile apps, web development, AI solutions, and UI/UX design.
                     </p>
-                    <p>
+                    <p data-en="With years of experience in software development, our team specializes in building beautiful, performant applications across mobile, web, and AI platforms. Our approach combines clean code practices with user-centered design to deliver exceptional digital experiences for clients." data-ar="مع سنوات من الخبرة في تطوير البرمجيات، يتخصص فريقنا في بناء تطبيقات جميلة وعالية الأداء عبر منصات الهاتف المحمول والويب والذكاء الاصطناعي. نهجنا يجمع بين ممارسات الكود النظيف والتصميم المتمحور حول المستخدم لتقديم تجارب رقمية استثنائية للعملاء.">
                         With years of experience in software development, our team specializes in building beautiful,
                         performant applications across mobile, web, and AI platforms. Our approach combines
                         clean code practices with user-centered design to deliver exceptional digital experiences for clients.
                     </p>
-                    <p>
+                    <p data-en="We stay at the forefront of technology, continuously exploring the latest developments in Flutter, web technologies, and AI to implement cutting-edge solutions that help businesses achieve their digital transformation goals." data-ar="نبقى في طليعة التكنولوجيا، نستكشف باستمرار أحدث التطورات في Flutter وتقنيات الويب والذكاء الاصطناعي لتنفيذ حلول متطورة تساعد الشركات على تحقيق أهداف التحول الرقمي.">
                         We stay at the forefront of technology, continuously exploring the latest developments in Flutter, web technologies, and AI
                         to implement cutting-edge solutions that help businesses achieve their digital transformation goals.
                     </p>
@@ -93,58 +96,58 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="category-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Custom App Development</h3>
+                    <h3 data-en="Custom App Development" data-ar="تطوير التطبيقات المخصصة">Custom App Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Flutter Apps</span>
-                        <span class="skill-tag">iOS Development</span>
-                        <span class="skill-tag">Android Development</span>
-                        <span class="skill-tag">Cross-Platform</span>
-                        <span class="skill-tag">Native Features</span>
+                        <span class="skill-tag" data-en="Flutter Apps" data-ar="تطبيقات Flutter">Flutter Apps</span>
+                        <span class="skill-tag" data-en="iOS Development" data-ar="تطوير iOS">iOS Development</span>
+                        <span class="skill-tag" data-en="Android Development" data-ar="تطوير Android">Android Development</span>
+                        <span class="skill-tag" data-en="Cross-Platform" data-ar="متعدد المنصات">Cross-Platform</span>
+                        <span class="skill-tag" data-en="Native Features" data-ar="الميزات الأصلية">Native Features</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="category-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Web Development</h3>
+                    <h3 data-en="Web Development" data-ar="تطوير الويب">Web Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Full-Stack</span>
-                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag" data-en="React" data-ar="React">React</span>
+                        <span class="skill-tag" data-en="Node.js" data-ar="Node.js">Node.js</span>
+                        <span class="skill-tag" data-en="Next.js" data-ar="Next.js">Next.js</span>
+                        <span class="skill-tag" data-en="Full-Stack" data-ar="Full-Stack">Full-Stack</span>
+                        <span class="skill-tag" data-en="Responsive Design" data-ar="التصميم المتجاوب">Responsive Design</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="category-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3>UI/UX & Product Design</h3>
+                    <h3 data-en="UI/UX & Product Design" data-ar="تصميم واجهات المستخدم والمنتجات">UI/UX & Product Design</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">User Interface Design</span>
-                        <span class="skill-tag">User Experience</span>
-                        <span class="skill-tag">Product Strategy</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag" data-en="User Interface Design" data-ar="تصميم واجهات المستخدم">User Interface Design</span>
+                        <span class="skill-tag" data-en="User Experience" data-ar="تجربة المستخدم">User Experience</span>
+                        <span class="skill-tag" data-en="Product Strategy" data-ar="استراتيجية المنتج">Product Strategy</span>
+                        <span class="skill-tag" data-en="Prototyping" data-ar="النماذج الأولية">Prototyping</span>
+                        <span class="skill-tag" data-en="Design Systems" data-ar="أنظمة التصميم">Design Systems</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="category-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>Backend & Infrastructure</h3>
+                    <h3 data-en="Backend & Infrastructure" data-ar="الخلفية والبنية التحتية">Backend & Infrastructure</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Database Design</span>
-                        <span class="skill-tag">Cloud Services</span>
-                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag" data-en="Firebase" data-ar="Firebase">Firebase</span>
+                        <span class="skill-tag" data-en="REST APIs" data-ar="REST APIs">REST APIs</span>
+                        <span class="skill-tag" data-en="Database Design" data-ar="تصميم قواعد البيانات">Database Design</span>
+                        <span class="skill-tag" data-en="Cloud Services" data-ar="خدمات السحابة">Cloud Services</span>
+                        <span class="skill-tag" data-en="DevOps" data-ar="DevOps">DevOps</span>
                     </div>
                 </div>
             </div>
@@ -154,7 +157,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Our Portfolio</h2>
+            <h2 class="section-title" data-en="Our Portfolio" data-ar="معرض أعمالنا">Our Portfolio</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -534,8 +537,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h2>
+            <p class="section-subtitle" data-en="Ready to start your next mobile app project? Let's discuss how we can bring your vision to life." data-ar="مستعد لبدء مشروع تطبيقك المحمول التالي؟ دعنا نناقش كيف يمكننا تحويل رؤيتك إلى واقع.">
                 Ready to start your next mobile app project? Let's discuss how we can bring your vision to life.
             </p>
             <div class="contact-content">
@@ -570,15 +573,15 @@
                 </div>
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements" data-en-placeholder="Tell us about your project requirements" data-ar-placeholder="أخبرنا عن متطلبات مشروعك" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Request Quote</button>
+                    <button type="submit" class="btn btn-primary" data-en="Request Quote" data-ar="اطلب عرض سعر">Request Quote</button>
                 </form>
             </div>
         </div>
