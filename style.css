@@ -1019,6 +1019,10 @@ section {
     flex-direction: row-reverse;
 }
 
+[dir="rtl"] .section-title {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .language-switcher {
         margin-left: 0;
