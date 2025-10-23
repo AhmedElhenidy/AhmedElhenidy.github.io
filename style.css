@@ -1023,6 +1023,27 @@ section {
     text-align: center;
 }
 
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6 {
+    text-align: center;
+}
+
+[dir="rtl"] .hero-title {
+    text-align: center;
+}
+
+[dir="rtl"] .hero-description {
+    text-align: center;
+}
+
+[dir="rtl"] .section-subtitle {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .language-switcher {
         margin-left: 0;
