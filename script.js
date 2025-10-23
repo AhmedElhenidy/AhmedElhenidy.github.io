@@ -273,7 +273,7 @@ animateCursor();
 */
 
 // ===== Language Switching =====
-let currentLanguage = 'en';
+let currentLanguage = 'ar';
 
 const langBtn = document.getElementById('lang-btn');
 const htmlElement = document.documentElement;
@@ -303,6 +303,47 @@ function switchLanguage() {
     htmlElement.setAttribute('dir', currentLanguage === 'ar' ? 'rtl' : 'ltr');
     htmlElement.setAttribute('lang', currentLanguage);
     
+    // Update content
+    updateLanguageContent();
+    
+    // Store language preference
+    localStorage.setItem('preferredLanguage', currentLanguage);
+}
+
+function updateTypingAnimation() {
+    // Reset typing animation with new phrases
+    const typingText = document.querySelector('.typing-text');
+    if (typingText) {
+        typingText.textContent = '';
+        phraseIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+        typingSpeed = 100;
+        setTimeout(typeText, 1000);
+    }
+}
+
+// Initialize language from localStorage or default to Arabic
+function initializeLanguage() {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ar')) {
+        currentLanguage = savedLanguage;
+        if (currentLanguage === 'ar') {
+            // Apply Arabic language settings
+            htmlElement.setAttribute('dir', 'rtl');
+            htmlElement.setAttribute('lang', 'ar');
+            updateLanguageContent();
+        }
+    } else {
+        // Default to Arabic
+        currentLanguage = 'ar';
+        htmlElement.setAttribute('dir', 'rtl');
+        htmlElement.setAttribute('lang', 'ar');
+        updateLanguageContent();
+    }
+}
+
+function updateLanguageContent() {
     // Update language button text
     langBtn.textContent = currentLanguage === 'en' ? 'العربية' : 'English';
     
@@ -326,33 +367,6 @@ function switchLanguage() {
     
     // Update typing animation phrases
     updateTypingAnimation();
-    
-    // Store language preference
-    localStorage.setItem('preferredLanguage', currentLanguage);
-}
-
-function updateTypingAnimation() {
-    // Reset typing animation with new phrases
-    const typingText = document.querySelector('.typing-text');
-    if (typingText) {
-        typingText.textContent = '';
-        phraseIndex = 0;
-        charIndex = 0;
-        isDeleting = false;
-        typingSpeed = 100;
-        setTimeout(typeText, 1000);
-    }
-}
-
-// Initialize language from localStorage or default to English
-function initializeLanguage() {
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ar')) {
-        currentLanguage = savedLanguage;
-        if (currentLanguage === 'ar') {
-            switchLanguage();
-        }
-    }
 }
 
 // Event listener for language button
