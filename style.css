@@ -1020,7 +1020,7 @@ section {
 }
 
 [dir="rtl"] .section-title {
-    text-align: center;
+    text-align: center !important;
 }
 
 [dir="rtl"] h1, 
@@ -1029,19 +1029,71 @@ section {
 [dir="rtl"] h4, 
 [dir="rtl"] h5, 
 [dir="rtl"] h6 {
-    text-align: center;
+    text-align: center !important;
 }
 
 [dir="rtl"] .hero-title {
-    text-align: center;
+    text-align: center !important;
 }
 
 [dir="rtl"] .hero-description {
-    text-align: center;
+    text-align: center !important;
 }
 
 [dir="rtl"] .section-subtitle {
-    text-align: center;
+    text-align: center !important;
+}
+
+[dir="rtl"] .project-content h3 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .skill-category h3 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .about-text h3 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .contact-item h3 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .timeline-content h3 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .timeline-content h4 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .project-content h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .skill-category h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .about-text h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .contact-item h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .timeline-content h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .hero-text h2 {
+    text-align: center !important;
+}
+
+[dir="rtl"] .section-subtitle h2 {
+    text-align: center !important;
 }
 
 @media (max-width: 768px) {
