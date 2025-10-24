@@ -1096,6 +1096,34 @@ section {
     text-align: center !important;
 }
 
+/* Force center all text in RTL mode */
+[dir="rtl"] * {
+    text-align: center !important;
+}
+
+/* Override specific elements that should not be centered */
+[dir="rtl"] .nav-menu,
+[dir="rtl"] .nav-menu *,
+[dir="rtl"] .hero-buttons,
+[dir="rtl"] .hero-buttons *,
+[dir="rtl"] .project-overlay,
+[dir="rtl"] .project-overlay *,
+[dir="rtl"] .social-links,
+[dir="rtl"] .social-links *,
+[dir="rtl"] .footer-links,
+[dir="rtl"] .footer-links *,
+[dir="rtl"] .skill-tags,
+[dir="rtl"] .skill-tags *,
+[dir="rtl"] .project-tags,
+[dir="rtl"] .project-tags *,
+[dir="rtl"] .contact-form,
+[dir="rtl"] .contact-form *,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] button {
+    text-align: left !important;
+}
+
 @media (max-width: 768px) {
     .language-switcher {
         margin-left: 0;
