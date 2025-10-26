@@ -155,35 +155,29 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
-// ===== Fancy Fade & Scale Effect for Sections on Scroll =====
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const sections = document.querySelectorAll('section');
+// ===== Staggered Reveal Effect for Cards on Scroll =====
+const revealCards = () => {
+    const cards = document.querySelectorAll('.project-card, .skill-category');
+    const windowHeight = window.innerHeight;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const windowHeight = window.innerHeight;
+    cards.forEach((card, index) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const cardVisible = 150;
         
-        // Calculate when section is in viewport
-        if (scrolled + windowHeight > sectionTop + 100) {
-            const distance = scrolled + windowHeight - sectionTop;
-            const percentage = Math.min(distance / (sectionHeight / 2), 1);
-            
-            // Apply smooth fade and slight scale effect
-            section.style.opacity = percentage;
-            section.style.transform = `scale(${0.95 + (percentage * 0.05)})`;
-            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        if (cardTop < windowHeight - cardVisible) {
+            card.classList.add('card-revealed');
         }
     });
-    
-    // Add floating animation to hero decorative element
-    const heroDecorative = document.querySelector('.hero::before');
-    if (heroDecorative) {
-        const floatAmount = Math.sin(scrolled * 0.002) * 20;
-        document.documentElement.style.setProperty('--float-y', `${floatAmount}px`);
-    }
-});
+};
+
+// Run on scroll
+window.addEventListener('scroll', revealCards);
+
+// Run on load
+window.addEventListener('load', revealCards);
+
+// Run once on init
+revealCards();
 
 // ===== Skills Hover Effect =====
 const skillTags = document.querySelectorAll('.skill-tag');
