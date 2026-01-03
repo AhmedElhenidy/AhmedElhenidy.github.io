@@ -163,7 +163,7 @@ const revealCards = () => {
     cards.forEach((card, index) => {
         const cardTop = card.getBoundingClientRect().top;
         const cardVisible = 150;
-        
+    
         if (cardTop < windowHeight - cardVisible) {
             card.classList.add('card-revealed');
         }
