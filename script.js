@@ -390,6 +390,6 @@ langBtn.addEventListener('click', switchLanguage);
 document.addEventListener('DOMContentLoaded', initializeLanguage);
 
 // ===== Print Console Message =====
-console.log('%c🚀 Welcome to Elhenidy Tech Solutions!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
-console.log('%cReady to build your next mobile app? Let\'s discuss your project!', 'font-size: 14px; color: #8b5cf6;');
+console.log('%cWelcome to Ahmed Elhenidy Portfolio', 'font-size: 20px; color: #c9a962; font-weight: bold;');
+console.log('%cReady to build your next mobile app? Let\'s discuss your project!', 'font-size: 14px; color: #9a9488;');
 
