@@ -370,6 +370,12 @@ section:nth-child(even) {
 .project-card:nth-child(13) { transition-delay: 0.65s; }
 .project-card:nth-child(14) { transition-delay: 0.7s; }
 .project-card:nth-child(15) { transition-delay: 0.75s; }
+.project-card:nth-child(16) { transition-delay: 0.8s; }
+.project-card:nth-child(17) { transition-delay: 0.85s; }
+.project-card:nth-child(18) { transition-delay: 0.9s; }
+.project-card:nth-child(19) { transition-delay: 0.95s; }
+.project-card:nth-child(20) { transition-delay: 1s; }
+.project-card:nth-child(21) { transition-delay: 1.05s; }
 
 .skill-category:nth-child(1) { transition-delay: 0s; }
 .skill-category:nth-child(2) { transition-delay: 0.15s; }
